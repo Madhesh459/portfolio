@@ -1,56 +1,40 @@
-Professional Portfolio Website
+# Professional Portfolio Website
 
-A modern, responsive portfolio website built using HTML, CSS, and JavaScript, deployed on AWS S3 with optional CloudFront for global delivery.
+A modern portfolio website built using HTML, CSS, and JavaScript, deployed on AWS S3 with optional CloudFront for global delivery.
 
 🌐 Live Website:
 https://maddy-portfolio-website-2025.s3.ap-south-2.amazonaws.com/index.html
 
-📁 Project Structure
-portfolio-website/
-├── index.html
-├── styles.css
-├── script.js
-└── README.md
+## 📁 Project Structure
+portfolio-website:
+  - index.html
+  - styles.css
+  - script.js
+  - README.md
 
-🛠️ Technologies
+## 🛠️ Technologies
+- HTML5
+- CSS
+- JavaScript 
 
-HTML5
+## ☁️ AWS Deployment (Summary)
+1. Create S3 bucket  
+2. Enable static website hosting  
+3. Upload all files  
+4. (Optional) Configure CloudFront  
+5. Set correct bucket policy  
 
-CSS3 (Flexbox + Grid)
+## 🔒 Best Practices
+- Least-privilege bucket access  
+- Use CloudFront with HTTPS  
+- Enable S3 versioning  
+- Monitor using CloudWatch  
 
-JavaScript (ES6)
+## 🐛 Troubleshooting
+- Site not loading → check bucket policy & hosting settings  
+- CSS not loading → verify file path (case-sensitive)  
+- JS issues → check console & file upload  
 
-☁️ AWS Deployment Summary
-
-Create an S3 bucket
-
-Enable static website hosting
-
-Upload all files
-
-(Optional) Set up CloudFront
-
-Apply correct bucket policy
-
-🔒 Best Practices
-
-Use least-privilege bucket policies
-
-Use CloudFront + HTTPS
-
-Enable S3 versioning
-
-Monitor with CloudWatch
-
-🐛 Common Issues
-
-Website not loading → check bucket policy + hosting settings
-
-CSS not loading → verify file path + case sensitivity
-
-JS errors → check console + file upload
-
-👤 Author
-
+## 👤 Author
 MadCloud – Cloud Professional
 
