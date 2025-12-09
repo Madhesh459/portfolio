@@ -2,6 +2,9 @@
 
 A modern, responsive portfolio website showcasing skills, projects, education, and contact information. This website is designed to be deployed on AWS using S3 for static website hosting and CloudFront for global content delivery.
 
+🌐 Live S3 Website
+https://maddy-portfolio-website-2025.s3.ap-south-2.amazonaws.com/index.html
+
 ## 📁 Project Structure
 
 ```
@@ -73,6 +76,7 @@ When deploying to AWS:
 ## 👤 Author
 
 MadCloud - Cloud Professional
+
 
 
 
