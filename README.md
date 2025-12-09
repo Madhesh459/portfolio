@@ -1,82 +1,56 @@
-# Professional Portfolio Website
+Professional Portfolio Website
 
-A modern, responsive portfolio website showcasing skills, projects, education, and contact information. This website is designed to be deployed on AWS using S3 for static website hosting and CloudFront for global content delivery.
+A modern, responsive portfolio website built using HTML, CSS, and JavaScript, deployed on AWS S3 with optional CloudFront for global delivery.
 
-🌐 Live S3 Website
+🌐 Live Website:
 https://maddy-portfolio-website-2025.s3.ap-south-2.amazonaws.com/index.html
 
-## 📁 Project Structure
-
-```
+📁 Project Structure
 portfolio-website/
-│
-├── index.html          # Main HTML file
-├── styles.css          # All CSS styles
-├── script.js           # JavaScript functionality
-└── README.md           # This file
-```
+├── index.html
+├── styles.css
+├── script.js
+└── README.md
 
-## 🛠️ Technologies Used
+🛠️ Technologies
 
-- **HTML5**: Semantic markup
-- **CSS3**: Modern styling with CSS Grid, Flexbox, and custom properties
-- **JavaScript (ES6+)**: Interactive functionality
+HTML5
 
-## ☁️ AWS Deployment
+CSS3 (Flexbox + Grid)
 
-This portfolio is designed to be deployed on AWS. See the [AWS Deployment Guide](AWS_DEPLOYMENT_GUIDE.md) for detailed step-by-step instructions.
+JavaScript (ES6)
 
-### Quick Deployment Steps:
+☁️ AWS Deployment Summary
 
-1. **Create S3 Bucket**: Create a bucket with public read access
-2. **Enable Static Website Hosting**: Configure the bucket for static website hosting
-3. **Upload Files**: Upload all website files to the S3 bucket
-4. **Configure CloudFront** (Optional): Set up CloudFront distribution for CDN
-5. **Set Bucket Policy**: Configure proper IAM permissions for public access
+Create an S3 bucket
 
+Enable static website hosting
 
-## 🔒 Security Best Practices
+Upload all files
 
-When deploying to AWS:
+(Optional) Set up CloudFront
 
-1. **Bucket Policy**: Use least-privilege access
-2. **HTTPS**: Always use CloudFront with SSL/TLS certificate
-3. **Versioning**: Enable S3 versioning for backup
-4. **Monitoring**: Set up CloudWatch alarms
-5. **Cost Optimization**: Use S3 lifecycle policies if needed
+Apply correct bucket policy
 
-## 📊 AWS Services Used
+🔒 Best Practices
 
-- **Amazon S3**: Static website hosting
-- **Amazon CloudFront**: Content delivery network (CDN)
-- **AWS IAM**: Access management and bucket policies
-- **Route 53** (Optional): Custom domain management
+Use least-privilege bucket policies
 
-## 🐛 Troubleshooting
+Use CloudFront + HTTPS
 
-### Website not loading after deployment
+Enable S3 versioning
 
-- Check S3 bucket policy allows public read access
-- Verify static website hosting is enabled
-- Check CloudFront distribution status
-- Verify index document is set to `index.html`
+Monitor with CloudWatch
 
-### Styles not loading
+🐛 Common Issues
 
-- Ensure `styles.css` is uploaded to S3
-- Check file paths are correct (case-sensitive)
-- Clear browser cache
+Website not loading → check bucket policy + hosting settings
 
-### JavaScript not working
+CSS not loading → verify file path + case sensitivity
 
-- Check browser console for errors
-- Verify `script.js` is uploaded to S3
-- Ensure JavaScript is enabled in browser
+JS errors → check console + file upload
 
-## 👤 Author
+👤 Author
 
-MadCloud - Cloud Professional
-
-
-
+MadCloud – Cloud Professional
 
