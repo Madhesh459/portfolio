@@ -3,7 +3,7 @@
 A modern portfolio website built using HTML, CSS, and JavaScript, deployed on AWS S3 with optional CloudFront for global delivery.
 
 🌐 Live Website:
-https://maddy-portfolio-website-2025.s3.ap-south-2.amazonaws.com/index.html
+http://maddy-portfolio-website-2025.s3-website.ap-south-2.amazonaws.com
 
 ## 📁 Project Structure
 portfolio-website:
@@ -37,4 +37,5 @@ portfolio-website:
 
 ## 👤 Author
 MadCloud – Cloud Professional
+
 
