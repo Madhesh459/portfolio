@@ -127,6 +127,126 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
+// Profile Photo and Orbiting Icons Interactivity
+const profilePhoto = document.querySelector('.profile-photo');
+const orbitIcons = document.querySelectorAll('.orbit-icon');
+const profileWrapper = document.querySelector('.profile-photo-wrapper');
+
+// Add mouse tracking effect to profile photo
+if (profilePhoto) {
+    profilePhoto.addEventListener('mousemove', function(e) {
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = (y - centerY) / 20;
+        const rotateY = (centerX - x) / 20;
+        
+        this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+    });
+    
+    profilePhoto.addEventListener('mouseleave', function() {
+        this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+    });
+}
+
+// Enhanced icon interactions
+orbitIcons.forEach((icon, index) => {
+    icon.addEventListener('mouseenter', function() {
+        const orbit = this.closest('.orbit');
+        if (orbit) {
+            const orbitClass = orbit.className.split(' ')[1];
+            const baseTransforms = {
+                'orbit-1': 'translate(-50%, -50%)',
+                'orbit-2': 'translate(-50%, 50%)',
+                'orbit-3': 'translate(50%, -50%)',
+                'orbit-4': 'translate(-50%, -50%)',
+                'orbit-5': 'translate(50%, -50%)',
+                'orbit-6': 'translate(-50%, 50%)'
+            };
+            const baseTransform = baseTransforms[orbitClass] || '';
+            this.style.transform = baseTransform + ' scale(1.3)';
+        }
+        this.style.zIndex = '100';
+        
+        // Add a glow effect
+        this.style.boxShadow = '0 8px 35px rgba(0, 0, 0, 0.5), 0 0 50px rgba(99, 102, 241, 0.7)';
+        this.style.filter = 'brightness(1.1)';
+    });
+    
+    icon.addEventListener('mouseleave', function() {
+        // Reset transform based on orbit position
+        const orbit = this.closest('.orbit');
+        if (orbit) {
+            const orbitClass = orbit.className.split(' ')[1];
+            const transforms = {
+                'orbit-1': 'translate(-50%, -50%)',
+                'orbit-2': 'translate(-50%, 50%)',
+                'orbit-3': 'translate(50%, -50%)',
+                'orbit-4': 'translate(-50%, -50%)',
+                'orbit-5': 'translate(50%, -50%)',
+                'orbit-6': 'translate(-50%, 50%)'
+            };
+            this.style.transform = transforms[orbitClass] || '';
+        }
+        this.style.zIndex = '';
+        this.style.boxShadow = '';
+        this.style.filter = '';
+    });
+    
+    // Add click effect
+    icon.addEventListener('click', function() {
+        this.style.animation = 'none';
+        setTimeout(() => {
+            this.style.animation = '';
+        }, 100);
+    });
+});
+
+// Parallax effect on scroll for profile container
+if (profileWrapper) {
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const heroSection = document.querySelector('.hero');
+        if (heroSection) {
+            const heroTop = heroSection.offsetTop;
+            const heroHeight = heroSection.offsetHeight;
+            
+            if (scrolled >= heroTop && scrolled <= heroTop + heroHeight) {
+                const parallax = (scrolled - heroTop) * 0.5;
+                profileWrapper.style.transform = `translateY(${parallax}px)`;
+            }
+        }
+    });
+}
+
+// Add entrance animation for icons
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px'
+};
+
+const iconObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'scale(1)';
+            }, index * 100);
+        }
+    });
+}, observerOptions);
+
+orbitIcons.forEach(icon => {
+    icon.style.opacity = '0';
+    icon.style.transform = 'scale(0)';
+    icon.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    iconObserver.observe(icon);
+});
+
 // Console message
 console.log('%c👋 Welcome to my portfolio!', 'color: #2563eb; font-size: 20px; font-weight: bold;');
 console.log('%cBuilt with HTML, CSS, and JavaScript', 'color: #6b7280; font-size: 14px;');
