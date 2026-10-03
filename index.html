@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Portfolio - Cloud Professional">
+    <title> MadCloud | Cloud Professional</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Apply saved theme before paint to prevent flash -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('madcloud-theme');
+            if (saved === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">MadCloud</div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Theme toggle -->
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-wrapper">
+                <!-- Profile Photo with Orbiting Icons -->
+                <div class="profile-container">
+                    <div class="profile-photo-wrapper">
+                        <div class="profile-photo">
+                            <img src="madhesh-formal.jpg" alt="Madheshwaran B" id="profile-image">
+                            <div class="profile-glow"></div>
+                        </div>
+                        
+                        <!-- Orbiting Icons -->
+                        <div class="orbit-container">
+                            <div class="orbit orbit-1">
+                                <div class="orbit-icon html-icon" data-tooltip="HTML5">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                            </div>
+                            <div class="orbit orbit-2">
+                                <div class="orbit-icon css-icon" data-tooltip="CSS3">
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                            </div>
+                            <div class="orbit orbit-3">
+                                <div class="orbit-icon js-icon" data-tooltip="JavaScript">
+                                    <i class="fab fa-js"></i>
+                                </div>
+                            </div>
+                            <div class="orbit orbit-4">
+                                <div class="orbit-icon react-icon" data-tooltip="React">
+                                    <i class="fab fa-react"></i>
+                                </div>
+                            </div>
+                            <div class="orbit orbit-5">
+                                <div class="orbit-icon aws-icon" data-tooltip="AWS">
+                                    <i class="fab fa-aws"></i>
+                                </div>
+                            </div>
+                            <div class="orbit orbit-6">
+                                <div class="orbit-icon git-icon" data-tooltip="Git">
+                                    <i class="fab fa-git-alt"></i>
+                                </div>
+                            </div>
+                            <div class="orbit orbit-7">
+                                <div class="orbit-icon docker-icon" data-tooltip="Docker">
+                                    <i class="fab fa-docker"></i>
+                                </div>
+                            </div>
+                            <div class="orbit orbit-8">
+                                <div class="orbit-icon jenkins-icon" data-tooltip="Jenkins">
+                                    <i class="fab fa-jenkins"></i>
+                                </div>
+                            </div>
+                            <div class="orbit orbit-9">
+                                <div class="orbit-icon terraform-icon" data-tooltip="Terraform">
+                                    <svg viewBox="0 0 32 32" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                                        <path d="M12.042 6.858l7.916 4.564v9.128l-7.916-4.564zM0 13.716l7.917 4.564V9.152L0 4.588zM12.042 25.142L20 20.578v-9.128l-7.958 4.564zM21.958 9.152v9.128L29.875 13.716z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hero Content -->
+                <div class="hero-content">
+                    <h1 class="hero-title">Hey, I'm <span class="highlight">Madheshwaran B</span> </h1>
+                    <p class="hero-subtitle">Cloud & DevOps Enthusiast | MERN Developer | Exploring ML</p>
+                    <p class="hero-description">I like building things, experimenting with technology, and figuring out how everything works behind the scenes. From cloud infrastructure to web apps and machine learning, I'm always exploring what's next.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-greeting">Hey, I'm Madheshwaran (Madhesh) 👋 — a CSE student who loves building things, breaking them (sometimes accidentally), and figuring out how to make them work better.</p>
+                    <p>I'm into Cloud Computing, DevOps and Machine Learning. I enjoy exploring new technologies, experimenting with ideas, and turning what I learn into something practical rather than just keeping it in my notes.</p>
+                    <p>On the coding side, I work with Python, Java and C, build web applications using the MERN stack, and have a basic understanding of Machine Learning, including data, model training, and predictions. I'm also curious about how AI can make everyday applications smarter.</p>
+                    <p>I got a closer look at the real-world side of technology during my DevOps internship at IDP Education, where I explored AWS services, Docker, Linux, CI/CD, and deployment workflows. It made me more interested in what happens after the code is written — how applications get deployed, managed, and kept running.</p>
+                    <p>I've also worked on projects like FinGuard AI and contributed to HealBee AI, exploring how different technologies come together to build useful applications.</p>
+                    <p>When I'm away from my laptop, you'll probably find me playing cricket or badminton, watching Netflix, or just exploring something new.</p>
+                    <p>Currently learning, building, experimenting, and working towards becoming a Cloud and DevOps Engineer. 🚀</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+
+                <!-- Card 1: Domain -->
+                <div class="skill-flip-wrapper">
+                    <button class="skill-flip-card"
+                            aria-pressed="false"
+                            aria-label="Domain skills card. Press Enter or Space to flip.">
+                        <!-- Front -->
+                        <div class="skill-face skill-front skill-border-1">
+                            <div class="skill-front-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <h3 class="skill-front-title">Domain</h3>
+                            <p class="skill-flip-hint">Click to explore</p>
+                        </div>
+                        <!-- Back -->
+                        <div class="skill-face skill-back skill-border-1 skill-back--domain">
+                            <h3 class="skill-back-title">
+                                <i class="fas fa-cloud"></i> Domain
+                            </h3>
+                            <div class="skill-items">
+                                <span class="skill-tag">Cloud Computing</span>
+                                <span class="skill-tag">DevOps</span>
+                                <span class="skill-tag">MERN Stack</span>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Card 2: Programming -->
+                <div class="skill-flip-wrapper">
+                    <button class="skill-flip-card"
+                            aria-pressed="false"
+                            aria-label="Programming skills card. Press Enter or Space to flip.">
+                        <!-- Front -->
+                        <div class="skill-face skill-front skill-border-2">
+                            <div class="skill-front-icon skill-icon-2">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3 class="skill-front-title">Programming</h3>
+                            <p class="skill-flip-hint">Click to explore</p>
+                        </div>
+                        <!-- Back -->
+                        <div class="skill-face skill-back skill-border-2">
+                            <h3 class="skill-back-title">
+                                <i class="fas fa-code"></i> Programming
+                            </h3>
+                            <p class="skill-subsection-label">Languages</p>
+                            <div class="skill-items">
+                                <span class="skill-tag skill-tag-sm">Python</span>
+                                <span class="skill-tag skill-tag-sm">C</span>
+                                <span class="skill-tag skill-tag-sm">Java</span>
+                            </div>
+                            <p class="skill-subsection-label">Problem-Solving</p>
+                            <div class="skill-items">
+                                <span class="skill-tag skill-tag-sm">Two Pointers</span>
+                                <span class="skill-tag skill-tag-sm">Sliding Window</span>
+                                <span class="skill-tag skill-tag-sm">Advanced Prefix Patterns</span>
+                                <span class="skill-tag skill-tag-sm">Intervals</span>
+                                <span class="skill-tag skill-tag-sm">Matrices</span>
+                                <span class="skill-tag skill-tag-sm">Monotonic Arrays</span>
+                            </div>
+                            <p class="skill-subsection-label">Data Structures</p>
+                            <div class="skill-items">
+                                <span class="skill-tag skill-tag-sm">Arrays & Strings</span>
+                                <span class="skill-tag skill-tag-sm">Linked List</span>
+                                <span class="skill-tag skill-tag-sm">Stack & Queue</span>
+                                <span class="skill-tag skill-tag-sm">Searching & Sorting</span>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Card 3: Tools & Technologies -->
+                <div class="skill-flip-wrapper">
+                    <button class="skill-flip-card"
+                            aria-pressed="false"
+                            aria-label="Tools and Technologies skills card. Press Enter or Space to flip.">
+                        <!-- Front -->
+                        <div class="skill-face skill-front skill-border-3">
+                            <div class="skill-front-icon skill-icon-3">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <h3 class="skill-front-title">Tools &amp; Technologies</h3>
+                            <p class="skill-flip-hint">Click to explore</p>
+                        </div>
+                        <!-- Back -->
+                        <div class="skill-face skill-back skill-border-3 skill-back--tools">
+                            <h3 class="skill-back-title">
+                                <i class="fas fa-layer-group"></i> Tools &amp; Tech
+                            </h3>
+                            <div class="skill-items">
+                                <span class="skill-tag">AWS</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">GitHub Actions</span>
+                                <span class="skill-tag">Linux</span>
+                                <span class="skill-tag">Jenkins</span>
+                                <span class="skill-tag">Terraform</span>
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">Django</span>
+                                <span class="skill-tag">PostgreSQL</span>
+                                <span class="skill-tag">Machine Learning</span>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-card">
+
+                <!-- Card Header -->
+                <div class="exp-header">
+                    <div class="exp-title-block">
+                        <h3 class="exp-job-title">DevOps Intern</h3>
+                        <div class="exp-company">
+                            <!-- IDP Education Logo -->
+                            <!-- TO ADD LOGO: Save the official IDP Education logo as
+                                 "idp-logo.png" in c:\portfolio\ and uncomment the line below.
+                                 Remove the placeholder div when the logo is ready. -->
+                            <!-- <img src="idp-logo.png" alt="IDP Education Ltd logo" class="exp-logo"> -->
+                            <div class="exp-logo-placeholder" aria-hidden="true">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <span class="exp-company-name">IDP Education India Services LLP</span>
+                        </div>
+                    </div>
+                    <div class="exp-meta">
+                        <span class="exp-meta-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            12/2025 – 1/2026
+                        </span>
+                        <span class="exp-meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Chennai, India
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Bullet Points — exact resume wording -->
+                <ul class="exp-bullets">
+                    <li>Explored the use of AWS cloud services in supporting scalable digital platforms and enterprise application workflows.</li>
+                    <li>Built foundational skills in Docker, Linux, and CI/CD by participating in hands-on DevOps training and deployment exercises.</li>
+                    <li>Observed how cloud infrastructure enables reliable, secure, and efficient delivery of technology services in a global education organization.</li>
+                    <li>Gained practical understanding of modern DevOps practices, including containerization and deployment automation.</li>
+                    <li>Strengthened cloud engineering fundamentals through real-world exposure to enterprise workflows and collaborative technical environments.</li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Website on AWS</h3>
+                        <p>A responsive portfolio website deployed on AWS S3 with CloudFront for global content delivery. 
+                           Features static website hosting with proper IAM policies and security configurations.</p>
+                        <div class="project-tech">
+                            <span>AWS S3</span>
+                            <span>CloudFront</span>
+                            <span>HTML/CSS/JS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Serverless API with Lambda</h3>
+                        <p>Built a RESTful API using AWS Lambda and API Gateway. Implemented serverless architecture 
+                           with DynamoDB for data storage and CloudWatch for monitoring.</p>
+                        <div class="project-tech">
+                            <span>AWS Lambda</span>
+                            <span>API Gateway</span>
+                            <span>DynamoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Secure Login Page with AWS Cognito</h3>
+                        <p>Developed a secure authentication system using AWS Cognito for user management and authentication. 
+                           Implemented user registration, login, password reset, and session management with JWT tokens.</p>
+                        <div class="project-tech">
+                            <span>AWS Cognito</span>
+                            <span>API Gateway</span>
+                            <span>Lambda</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+
+            <!-- AWS Certified Cloud Practitioner -->
+            <div class="certification-group">
+                <h3 class="certification-group-title"><i class="fas fa-certificate"></i> AWS Certified Cloud Practitioner (CLF-C02)</h3>
+                <div class="cert-meta">
+                    <span><i class="fas fa-building"></i> Amazon Web Services</span>
+                    <span><i class="fas fa-calendar-alt"></i> Valid until July 2029</span>
+                </div>
+                <p class="cert-learned-label">What I learned:</p>
+                <ul class="certifications-list">
+                    <li class="certification-item">Core AWS cloud concepts, benefits, and global infrastructure.</li>
+                    <li class="certification-item">Compute, storage, networking, and database services.</li>
+                    <li class="certification-item">IAM, the shared responsibility model, and cloud security fundamentals.</li>
+                    <li class="certification-item">AWS pricing, billing, support plans, and cost management.</li>
+                </ul>
+            </div>
+
+            <!-- AWS Certified AI Practitioner -->
+            <div class="certification-group">
+                <h3 class="certification-group-title"><i class="fas fa-robot"></i> AWS Certified AI Practitioner (AIF-C01)</h3>
+                <div class="cert-meta">
+                    <span><i class="fas fa-building"></i> Amazon Web Services</span>
+                    <span><i class="fas fa-calendar-alt"></i> Valid until Sep 2029</span>
+                </div>
+                <p class="cert-learned-label">What I learned:</p>
+                <ul class="certifications-list">
+                    <li class="certification-item">Fundamental AI, machine learning, and generative AI concepts.</li>
+                    <li class="certification-item">Identifying practical AI use cases and selecting suitable approaches.</li>
+                    <li class="certification-item">Generative AI foundations, foundation models, and prompt engineering.</li>
+                    <li class="certification-item">Responsible AI, security, governance, and ethical considerations.</li>
+                    <li class="certification-item">AWS AI services and their applications in real-world solutions.</li>
+                </ul>
+            </div>
+
+            <!-- C, C++, Java, Python for Data Science -->
+            <div class="certification-group">
+                <h3 class="certification-group-title"><i class="fas fa-code"></i> C, C++, Java, Python for Data Science</h3>
+                <div class="cert-meta">
+                    <span><i class="fas fa-building"></i> Code Galatta</span>
+                    <span><i class="fas fa-calendar-alt"></i> October 2024</span>
+                </div>
+                <p class="cert-learned-label">What I learned:</p>
+                <ul class="certifications-list">
+                    <li class="certification-item">Programming fundamentals, variables, data types, and control structures.</li>
+                    <li class="certification-item">Functions, problem-solving, and object-oriented programming concepts.</li>
+                    <li class="certification-item">Writing and debugging programs using C, C++, and Java.</li>
+                    <li class="certification-item">Python fundamentals and its use in data handling and data science workflows.</li>
+                </ul>
+            </div>
+
+            <!-- Full Stack Development (MERN Stack) -->
+            <div class="certification-group">
+                <h3 class="certification-group-title"><i class="fas fa-layer-group"></i> Full Stack Development (MERN Stack)</h3>
+                <div class="cert-meta">
+                    <span><i class="fas fa-building"></i> Code Galatta</span>
+                    <span><i class="fas fa-calendar-alt"></i> November 2025</span>
+                </div>
+                <p class="cert-learned-label">What I learned:</p>
+                <ul class="certifications-list">
+                    <li class="certification-item">Building interactive user interfaces with React.</li>
+                    <li class="certification-item">Developing backend applications and REST APIs with Node.js and Express.</li>
+                    <li class="certification-item">Working with MongoDB for data storage and retrieval.</li>
+                    <li class="certification-item">Connecting frontend, backend, and database components into web applications.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>b.madhesh946@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 7397280406</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Chennai , Tamil Nadu , India</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/madheshwaranb2006/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Madhesh459" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://x.com/Madhesh946" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="mailto:b.madhesh946@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 My Portfolio. Built with ❤️ and deployed on AWS.</p>
+            <p class="footer-note">Hosted on Amazon S3 with CloudFront CDN</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
